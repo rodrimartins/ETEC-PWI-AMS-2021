@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo 5</title>
+  </head>
+  <body>
+    <h1>Trabalhando com Formulários</h1>
+
+    <form action="cadastro.php" method="POST">
+      <p>
+        <label for="nome">Nome:</label>
+        <input
+          type="text"
+          name="txtNome"
+          id="nome"
+          size="60"
+          placeholder="Digite seu nome"
+          autofocus
+        />
+      </p>
+
+      <p>
+        <label for="senha">Senha:</label>
+        <input type="password" maxlength="8" />
+      </p>
+
+      <p>
+        <label for="telefone">Telefone:</label>
+        <input
+          type="tel"
+          name="txtTel"
+          id="telefone"
+          placeholder="(XX)XXXXX-XXXX"
+          required
+        />
+      </p>
+
+      <p>
+        <label for="email">E-Mail</label>
+        <input
+          type="email"
+          name="txtEmail"
+          id="email"
+          placeholder="email@email.com"
+        />
+      </p>
+
+      <p>
+        <label for="site">Site:</label>
+        <input
+          type="url"
+          name="txtSite"
+          id="site"
+          placeholder="https:\\www.exemplo.com.br"
+        />
+      </p>
+
+      <p>
+        <label for="nota">Nota:</label>
+        <input
+          type="number"
+          name="txtNota"
+          id="nota"
+          min="0"
+          max="10"
+          step="0.5"
+        />
+      </p>
+
+      <p>
+        <label for="volume">Volume:</label>
+        <input type="range" name="txtVolume" min="0" max="100" step="10" />
+      </p>
+
+      <p>
+        <label for="data">Data:</label>
+        <input type="date" name="txtData" id="data">
+
+      </p>
+
+      <p>
+        <label for="mes">Mês:</label>
+        <input type="month" name="txtMes" id="mes">
+
+      </p>
+
+      <p>
+        <label for="semana">Semana:</label>
+        <input type="week" name="txtSem" id="semana">
+
+      </p>
+
+      <p>
+        <label for="hora">Hora:</label>
+        <input type="time" name="txtHora" id="hora">
+
+      </p>
+
+      <p>
+        <label for="hora1">Data/Hora/Minuto:</label>
+        <input type="datetime-local" name="txtHora1" id="hora1">
+
+      </p>
+
+      <p>
+        <button type="submit">ENVIAR</button>
+      </p>
+    </form>
+  </body>
+</html>

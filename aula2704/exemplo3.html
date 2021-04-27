@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo 3</title>
+
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Trabalhando com Tabelas</h1>
+
+    <h2>Tabela dentro de tabela</h2>
+
+    <table>
+      <tr>
+        <td>
+          <p>Parágrafo 1</p>
+          <p>Parágrafo 2</p>
+        </td>
+        <td>
+            <table>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>D</td>
+                </tr>
+
+            </table>
+        </td>
+      </tr>
+      <tr>
+          <td>Lista não ordenada
+              <ul>
+                  <li>Maça</li>
+                  <li>Banana</li>
+                  <li>Abacaxi</li>
+              </ul>
+          </td>
+
+
+      </tr>
+    </table>
+    <br>
+    <br>
+
+    <h2>Célula que abrange 2 colunas</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th colspan="2">Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Rodrigo</td>
+                <td>1111-4444</td>
+                <td>2222-5555</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+
+    <br>
+
+    <h2>Célula que abrange 2 linhas</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <td>Rodrigo</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="2">Telefone</th>
+                <td>111-44444</td>
+            </tr>
+            <tr>
+                <td>22222-44444</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+
+  </body>
+</html>
