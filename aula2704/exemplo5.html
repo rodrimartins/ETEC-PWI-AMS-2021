@@ -9,7 +9,10 @@
   <body>
     <h1>Trabalhando com Formulários</h1>
 
-    <form action="cadastro.php" method="POST">
+    <form onsubmit="return true" 
+    oninput="resultado.value=num1.valueAsNumber*num2.valueAsNumber" 
+    action="cadastro.php" 
+    method="POST">
       <p>
         <label for="nome">Nome:</label>
         <input
@@ -35,8 +38,8 @@
           id="telefone"
           placeholder="(XX)XXXXX-XXXX"
           required
-        />
-      </p>
+        /> <span style="color: red;">* campo Obrigatório</span>
+      </p> 
 
       <p>
         <label for="email">E-Mail</label>
@@ -106,7 +109,83 @@
       </p>
 
       <p>
+        <fieldset>
+          <legend>Estado Civil:</legend>
+          <input type="radio" name="estadoCivil" value="casado" id="estadoCivil">Casado
+          <input type="radio" name="estadoCivil" value="solteiro" id="estadoCivil">Solteiro
+          <input type="radio" name="estadoCivil" value="viuvo" id="estadoCivil">Viúvo
+        </fieldset>
+
+        <fieldset>
+          <legend>Produtos:</legend>
+          <input type="checkbox" name="Impressora" value="impressora">Impressora
+          <input type="checkbox" name="Monitor" value="monitor">Monitor
+          <input type="checkbox" name="Mouse" value="mouse">Mouse
+        </fieldset>
+
+      </p>
+
+
+      <p>
+        <label for="pesquisa">O que deseja pesquisar?</label>
+        <input type="search" name="txtPesquisa" id="pesquisa">
+      </p>
+
+      <p>
+        <label for="cor">Selecione a cor do texto:</label>
+        <input type="color" name="cor" id="cor">
+      </p>
+
+
+      <p>
+        <label for="sugestao">Deixe sua sugestão:</label><br>
+        <textarea name="txtSugestao" id="sugestao" cols="50" rows="25"></textarea>
+
+      </p>
+
+     <p>
+      <label for="site">Selecione o site:</label>
+      <input type="url" list="sites"  name="site" id="site">
+ 
+     <datalist id="sites">
+      <option value="http://uol.com.br">
+      <option value="http://uol.com.br">
+      <option value="http://uol.com.br">
+
+     </datalist>
+    </p>
+
+     <p>
+       <label for="calculo">Multiplicação de dois valores:</label>
+       <input type="number" name="num1"> *
+       <input type="number" name="num2"> =
+       <output name="resultado"></output>
+     </p>
+
+     <p>
+      <label for="uf">Selecione o Estado:</label>
+      <select size="10"  name="uf" id="uf">
+        <option value="sp">SP</option>
+        <option value="mg">MG</option>
+        <option value="rj">RJ</option>
+        <option value="pa">PA</option>
+        <option value="pi">PI</option>
+        <option value="es">ES</option>
+        <option value="ce">CE</option>
+
+
+
+      </select>
+
+     </p>
+     
+
+
+      <br><br><br><br><br>
+      <p>
         <button type="submit">ENVIAR</button>
+        <input type="reset" value="LIMPAR">
+        <button type="button" onclick="alert('Hoje é terça-feira')">Clique Aqui</button>
       </p>
     </form>
   </body>
